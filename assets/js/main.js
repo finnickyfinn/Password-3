@@ -19,7 +19,7 @@ function makePassword() {
         var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.) in your password?");
     }
 
-  var password = generatePassword(passwordlength, includelowercase, includeuppercase, includenumbers, includespecial);
+  var password = genaratePassword(passwordlength, includelowercase, includeuppercase, includenumbers, includespecial);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -27,7 +27,13 @@ function makePassword() {
 }
 
 
-function generatePassword(length, lowercase, uppercase, numbers,special) {
+
+
+
+
+function genaratePassword(length, lowercase, uppercase, numbers,special) {
+
+
     var characters = "";
     var password = "";
 
@@ -51,4 +57,4 @@ function generatePassword(length, lowercase, uppercase, numbers,special) {
     return password;
 }
 
-generateBtn.addEventListener("click",writePassword)
+generateBtn.addEventListener("click",makePassword)
