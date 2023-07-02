@@ -1,7 +1,7 @@
 var password=document.getElementById("password");
 var generateBtn = document.querySelector("#generate");
 
-function writePassword() {
+function makePassword() {
     var passwordlength = prompt("How long would you like your password to be? (Enter number from 8 and 128)");
     if (passwordlength < 8 || passwordlength > 128) {
         passwordlength = prompt("Invalid. Enter a value between 8 and 128.");
@@ -54,4 +54,4 @@ function generatePassword(length, lowercase, uppercase, numbers,special) {
     return password;
 }
 
-generateBtn.addEventListener("click",writePassword)
+generateBtn.addEventListener("click",makePassword)
