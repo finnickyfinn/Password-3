@@ -19,7 +19,7 @@ function makePassword() {
         var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.)?");
     }
 
-  var password = generatePassword(passwordlength, includelowercase, includeuppercase, includenumbers, includespecial);
+  var password = genaratePassword(passwordlength, includelowercase, includeuppercase, includenumbers, includespecial);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -30,7 +30,7 @@ function makePassword() {
 
 
 
-function generatePassword(length, lowercase, uppercase, numbers,special) {
+function genaratePassword(length, lowercase, uppercase, numbers,special) {
     var characters = "";
     var password = "";
 
