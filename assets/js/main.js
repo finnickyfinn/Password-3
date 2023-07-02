@@ -1,22 +1,22 @@
 var password=document.getElementById("password");
 var generateBtn = document.querySelector("#generate");
 
-function writePassword() {
+function makePassword() {
     var passwordlength = prompt("How long would you like your password to be? (Enter number from 8 and 128)");
-    if (passwordlength < 8 || passwordlength > 128) {
-        passwordlength = prompt("Invalid. Enter a value between 8 and 128.");
+    while (passwordlength < 8 || passwordlength > 128) {
+        passwordlength = prompt("Please enter a value between 8 and 128.");
     }
-    var includelowercase = confirm("Do you want any lowercase characters?");
-    var includeuppercase = confirm("Do you want any uppercase characters?");
-    var includenumbers = confirm("Do you want any numbers?");
-    var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.)?");
+    var includelowercase = confirm("Do you want lowercase characters in your password?");
+    var includeuppercase = confirm("Do you want any uppercase characters in your password?");
+    var includenumbers = confirm("Do you want any numbers in your password?");
+    var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.) in your password?");
 
     while (!includelowercase && !includeuppercase && !includenumbers && !includespecial) {
         alert("Select at least one character type to include.");
-        var includelowercase = confirm("Do you want any lowercase characters?");
-        var includeuppercase = confirm("Do you want any uppercase characters?");
-        var includenumbers = confirm("Do you want any numbers?");
-        var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.)?");
+        var includelowercase = confirm("Do you want any lowercase characters in your password?");
+        var includeuppercase = confirm("Do you want any uppercase charactersin your password?");
+        var includenumbers = confirm("Do you want any numbers in your password?");
+        var includespecial = confirm("Do you want any special characters (!,$,*,&,?,etc.) in your password?");
     }
 
   var password = generatePassword(passwordlength, includelowercase, includeuppercase, includenumbers, includespecial);
@@ -25,9 +25,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
-
 
 
 function generatePassword(length, lowercase, uppercase, numbers,special) {
